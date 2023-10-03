@@ -30,7 +30,7 @@ def insert():
 	cur = con.cursor()
 	cur.execute(""" INSERT INTO users (username, password)
 			VALUES (?, ?) """,
-			(request.form['un'], request.form['pw'])	)
+			(request.form['un'], request.form['pw']))
 	con.commit()
 	con.close()
 	return 'signup successful'
